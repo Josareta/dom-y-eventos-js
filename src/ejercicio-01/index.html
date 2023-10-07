@@ -7,9 +7,23 @@
   </head>
   <body>
     <!-- Escribe tu codigo html aqui -->
+    <div id="miElemento">
+      <h2> Hola Blockmaker</h2></div>
+    <button id="boton" type="submit" class="btn btn-primary btn-lg">
+      Cambiar Texto
+      </button>
 
     <script>
       // Escribe tu codigo javascript aqui
+
+      const elemento = document.getElementById("miElemento")
+      const boton = document.getElementById("boton")
+      boton.addEventListener("click",()=>{
+        elemento.textContent = "Bienvenido BlockMaker a la sesión de ejercicios"
+
+      })
+      
+      
     </script>
   </body>
 </html>
