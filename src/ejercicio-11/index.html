@@ -1,3 +1,5 @@
+<!-- Ejercicio 11: Eliminar Elemento con `removeChild`-->
+
 <!DOCTYPE html>
 <html lang="es">
   <head>
@@ -7,9 +9,18 @@
   </head>
   <body>
     <!-- Escribe tu codigo html aqui -->
+    <div id="contenedor">
+      <div id="elementoAEliminar">Elemento a eliminar</div>
+    </div>
 
     <script>
       // Escribe tu codigo javascript aqui
+      const elementoAEliminar = document.getElementById("elementoAEliminar")
+     
+      //const padre = document.getElementById("contenedor")
+      //La propiedad parentElement define el elemento padre del elemento que va delante del punto y puede sustituir a la definición con getElementById
+      const padre = elementoAEliminar.parentElement
+      padre.removeChild(elementoAEliminar)
     </script>
   </body>
 </html>
