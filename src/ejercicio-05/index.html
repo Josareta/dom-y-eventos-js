@@ -1,3 +1,4 @@
+<!-- Ejercicio 5: Cambio de Contenido con `textContent`-->
 <!DOCTYPE html>
 <html lang="es">
   <head>
@@ -7,9 +8,23 @@
   </head>
   <body>
     <!-- Escribe tu codigo html aqui -->
+    <div id="miElemento" style="font-size: 3em;">Haga click en el botón, para ver su mensaje de bienvenida</div>
+    <button type="button" id="boton" style="font-size: 2em;">Cambiar texto</button>
+    
 
     <script>
       // Escribe tu codigo javascript aqui
+      const elemento = document.getElementById("miElemento")
+      const boton = document.getElementById("boton")
+
+      boton.addEventListener("click",() => {
+        elemento.textContent = "Bienvenido a Blockmaker Academy"
+
+      })
+   
+      
+   
     </script>
+
   </body>
 </html>
