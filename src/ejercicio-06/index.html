@@ -1,3 +1,5 @@
+<!-- Ejercicio 6: Cambio de Contenido con `innerHTML`-->
+
 <!DOCTYPE html>
 <html lang="es">
   <head>
@@ -7,9 +9,19 @@
   </head>
   <body>
     <!-- Escribe tu codigo html aqui -->
+    <div id="miElemento">Texto inicial</div>
+    <button type="button" id="miBoton">Cambiar texto</button>
 
     <script>
       // Escribe tu codigo javascript aqui
+      const elemento = document.getElementById("miElemento")
+      const boton = document.getElementById("miBoton")
+      elemento.style.fontSize = "2em"
+      boton.style.fontSize = "2em"
+      boton.addEventListener("click",()=> {
+        elemento.innerHTML = "<strong>Nuevo contenido HTML</strong>"
+      })
+      
     </script>
   </body>
 </html>
