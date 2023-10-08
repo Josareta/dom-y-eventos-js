@@ -1,3 +1,5 @@
+<!-- Ejercicio 18: Evento Personalizado y Disparo-->
+
 <!DOCTYPE html>
 <html lang="es">
   <head>
@@ -7,9 +9,26 @@
   </head>
   <body>
     <!-- Escribe tu codigo html aqui -->
+    <button id="miBoton" >Disparar Evento Personalizado</button>
 
     <script>
       // Escribe tu codigo javascript aqui
+      const boton = document.getElementById('miBoton')
+      boton.style.fontSize = "1.5em"
+
+
+      function crearEventoPersonalizado() {
+        const eventoPersonalizado = new Event('eventoPersonalizado')
+        boton.dispatchEvent(eventoPersonalizado)
+      }
+
+      boton.addEventListener('eventoPersonalizado', () => {
+        alert('¡Evento personalizado disparado!')
+      })
+
+      boton.addEventListener('click', () => {
+        crearEventoPersonalizado()
+      })
     </script>
   </body>
 </html>
