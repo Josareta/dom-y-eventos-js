@@ -1,3 +1,5 @@
+<!-- Ejercicio 14: Detener la Propagación de Evento-->
+
 <!DOCTYPE html>
 <html lang="es">
   <head>
@@ -7,9 +9,32 @@
   </head>
   <body>
     <!-- Escribe tu codigo html aqui -->
+    <div id="elementoPadre">Clic en elemento padre
+      <div id="elementoHijo">Clic en elemento hijo</div>
+    </div>
 
     <script>
       // Escribe tu codigo javascript aqui
+      const elementoHijo = document.getElementById("elementoHijo")
+      const padre = document.getElementById("elementoPadre")
+      padre.style.backgroundColor = "green"
+      padre.style.fontSize = "2em"
+      padre.style.color = "white"
+      elementoHijo.style.backgroundColor = "aqua"
+      elementoHijo.style.fontSize = "1em"
+      elementoHijo.style.width = "25%"
+      elementoHijo.style.color = "black"
+      //Si omitimos el método .stopPropagation, al clicar el elemento hijo y aceptar su alerta, se dispararía automáticamente el evento padre
+      elementoHijo.addEventListener('click', (evento) => {
+        evento.stopPropagation()
+        alert('Evento hijo')
+      })
+      padre.addEventListener("click", (event) => {
+        event.stopPropagation()
+        alert("Evento Padre")
+      })
+
+
     </script>
   </body>
 </html>
