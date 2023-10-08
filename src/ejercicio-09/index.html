@@ -1,3 +1,5 @@
+<!-- Ejercicio 9: Manipulación de Clases con `classList`-->
+
 <!DOCTYPE html>
 <html lang="es">
   <head>
@@ -7,9 +9,23 @@
   </head>
   <body>
     <!-- Escribe tu codigo html aqui -->
+    <div id="miElemento">Elemento con clase</div>
 
     <script>
       // Escribe tu codigo javascript aqui
+      const elemento = document.getElementById('miElemento')
+
+      elemento.classList.add("texto")
+
+      const texto = document.getElementsByClassName("texto")
+
+      elemento.style.fontSize = "2em"
+      elemento.style.width = "25%"
+
+      texto.style.backgroundColor = "aqua"
+      
+      
+    
     </script>
   </body>
 </html>
