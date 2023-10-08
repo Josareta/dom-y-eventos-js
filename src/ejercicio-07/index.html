@@ -1,3 +1,5 @@
+<!-- Ejercicio 7: Cambio de Atributos con `setAttribute`--> 
+
 <!DOCTYPE html>
 <html lang="es">
   <head>
@@ -7,9 +9,15 @@
   </head>
   <body>
     <!-- Escribe tu codigo html aqui -->
+    <div id="miElemento">Elemento con atributo</div>
 
     <script>
       // Escribe tu codigo javascript aqui
+      const elemento = document.getElementById('miElemento')
+      // Ojo, los atributos, irán con la sintaxis de HTML, para que sean reconocidos
+      elemento.setAttribute('style', 'font-Size:3em; color: green')
+     // Se pueden añadir varios valores al mismo atributo
+     
     </script>
   </body>
 </html>
