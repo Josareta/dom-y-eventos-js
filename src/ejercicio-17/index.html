@@ -1,3 +1,5 @@
+<!-- Ejercicio 17: Manejo de Evento de Carga de Imagen
+-->
 <!DOCTYPE html>
 <html lang="es">
   <head>
@@ -7,9 +9,16 @@
   </head>
   <body>
     <!-- Escribe tu codigo html aqui -->
+    <img id="miImagen" src="imagen.jpg" alt="Imagen" />
 
     <script>
       // Escribe tu codigo javascript aqui
+      const imagen = document.getElementById('miImagen')
+      // Evento load, se dispara cuando el elemento se ha terminado de cargar
+      imagen.addEventListener('load', () => {
+        alert('La imagen se ha cargado correctamente')
+      })
+
     </script>
   </body>
 </html>
